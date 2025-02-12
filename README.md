@@ -10,7 +10,7 @@
 9. sudo su -
 10. mysql
    - CREATE USER 'student'@'localhost' IDENTIFIED BY 'student';
-   - GRANT ALL PRIVILEGES ON *.* TO 'student'@'localhost' WITH GRANT OPTION;
+   - GRANT ALL PRIVILEGES ON "*"."*" TO 'student'@'localhost' WITH GRANT OPTION;
    - flush privileges;
    - quit
 11. cd /var/www/html
