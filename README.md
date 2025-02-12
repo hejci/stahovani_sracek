@@ -20,4 +20,20 @@
 15. ps axu | grep apache //zjisteni na jakem uzivateli bezi
 16. cd ..
 17. chown www-data.www-data -R ./*
-     
+# zmena portu na kterem bezi
+1. sudo apt install net-tools
+2. netstat -vapnl | grep apache
+3. cd /etc/apache2
+4. grep port -r ./* //najdu soubor LIKE ports
+5. mcedit ports.conf
+   -upravit u Listen port
+6. systemctl restart apache2
+   # zaloha
+1. mysqldump -u student -pstudent wordpress > /tmp/zaloha.sql //zaloha
+2. cat /tmp/zaloha.sql | mysql -u student -pstudent wordpress //obnoveni
+3. tar cvfz /tmp/zaloha.tar.gz /var/www/html/ //zaloha databaze
+4. tar xvfz /tmp/zaloha.tar.gz -C /tmp //obnova databaze
+
+
+
+   
